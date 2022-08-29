@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Received POST Request</title>
+   </head>
+   <body>
+      {% extends "template.html" %}
+      {% block content %}
+      <h1> POST Message: </h1>
+
+      <label>Data received from ESP32: {{data}} </label>
+      <br>  
+      <br>          
+      <button onClick="window.location.href=window.location.href">Update Value</button>
+
+      {% endblock %}
+   </body>
+</html>

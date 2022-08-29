@@ -1,0 +1,106 @@
+
+   <head>
+        <title>Home for Simple Flask Website</title>
+   </head>
+   <body>
+      {% extends "template.html" %}
+      {% block script %}
+
+     <body>
+         <div id="map" class="mazemap"></div>
+     
+         <script>
+             var spotsFree1, spotsFree2, spotsFree3, spotsFree4, spotsFree5, spotsFree6
+             var spotsColor = {{ spotsAvailable|tojson }}
+             //spotsColor = spotsColor.replace('"','')
+             spotsColor = spotsColor.slice(1,-1)
+             
+             if (spotsColor[0]== 0) {
+                spotsFree1 = "MazeGreen"
+                } else {
+                spotsFree1 = "MazeRed"
+                }
+                if (spotsColor[1]== 0) {
+                spotsFree2 = "MazeGreen"
+                } else {
+                spotsFree2 = "MazeRed"
+                }
+                if (spotsColor[2]== 0) {
+                spotsFree3 = "MazeGreen"
+                } else {
+                spotsFree3 = "MazeRed"
+                }
+                if (spotsColor[3]== 0) {
+                spotsFree4 = "MazeGreen"
+                } else {
+                spotsFree4 = "MazeRed"
+                }
+                if (spotsColor[4]== 0) {
+                spotsFree5 = "MazeGreen"
+                } else {
+                spotsFree5 = "MazeRed"
+                }
+                if (spotsColor[5]== 0) {
+                spotsFree6 = "MazeGreen"
+                } else {
+                spotsFree6 = "MazeRed"
+                }
+             var myMap = new Mazemap.Map({
+                 container: 'map',
+                 campuses: 89,
+                 center: {lng:  12.519825, lat: 55.786341},
+                 zoom: 14.5,
+                 scrollZoom: true,
+                 doubleClickZoom: true,
+                 touchZoomRotate: true,
+                 zLevelControl: true
+             });
+         
+             myMap.on('load', function(){
+                 // MazeMap ready
+     
+                 var marker1 = new Mazemap.MazeMarker( {
+                     color: spotsFree1,
+                     size: 36,
+                     zLevel: 1
+                 } ).setLngLat({lng: 12.516988, lat: 55.782899 }).addTo(myMap);
+                 
+             
+             var marker2 = new Mazemap.MazeMarker( {
+                     color: spotsFree2,
+                     size: 36,
+                     zLevel: 1
+                 } ).setLngLat({lng:12.517509,lat: 55.782842}).addTo(myMap);
+
+
+                 var marker3 = new Mazemap.MazeMarker( {
+                     color: spotsFree3,
+                     size: 36,
+                     zLevel: 1
+                 } ).setLngLat({lng:12.517127, lat:55.783188}).addTo(myMap);
+                
+
+                 var marker4 = new Mazemap.MazeMarker( {
+                     color: spotsFree4,
+                     size: 36,
+                     zLevel: 1
+                 } ).setLngLat({lng:12.517673, lat:55.783109}).addTo(myMap);
+
+                 var marker5 = new Mazemap.MazeMarker( {
+                     color: spotsFree5,
+                     size: 36,
+                     zLevel: 1
+                 } ).setLngLat({lng:12.517294, lat:55.783469}).addTo(myMap);
+                
+                 var marker6 = new Mazemap.MazeMarker( {
+                     color: spotsFree6,
+                     size: 36,
+                     zLevel: 1
+                 } ).setLngLat({lng:12.517827, lat:55.783382}).addTo(myMap);
+                 
+             });
+         </script>
+     </body>
+    
+      {% endblock %}
+   </body>

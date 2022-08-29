@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+      <meta charset="utf-8" />
+  
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/mazemap.min.css') }}">
+      <script type='text/javascript' src='https://api.mazemap.com/js/v2.0.25/mazemap.min.js'></script>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+      <style>
+         body { margin:0px; padding:0px; width: 100vw; height:100vh; }
+     </style>
+   </head>
+   <body>
+      <header>
+         <div class="container">
+            <h1 class="logo"> <img src="{{url_for('static', filename='dtulogo.png')}}" align="left" width="30"> </h1>
+            <h1 class="text"> &nbsp;34315: Smart Parking IoT</h1>
+            <strong>
+               <nav>
+                  <ul class="menu">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('team') }}">Team</a></li>
+                    <li><a href="{{ url_for('monitoring') }}">Monitoring</a></li>
+                  </ul>
+               </nav>
+            </strong>
+         </div>
+      </header>
+      {% block content %}
+      {% endblock %}
+      {% block script %}
+      {% endblock %}
+
+    
+
+   </body>
+</html>

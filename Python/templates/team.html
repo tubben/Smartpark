@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Home for Simple Flask Website</title>
+   </head>
+   <body>
+      {% extends "template.html" %}
+      {% block content %}
+      <h1> Team Members </h1>
+      <p> Mads Dudzik Møller s174855&nbsp; <img src="{{url_for('static', filename='mads.png')}}" align="middle" /> </p>
+      
+      <p> Tobias Skovgaard s174863 &nbsp; &nbsp;  <img src="{{url_for('static', filename='tobias.png')}}" align="middle" /> </p>
+
+      {% endblock %}
+   </body>
+</html>

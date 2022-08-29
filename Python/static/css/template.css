@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+    }
+    /*
+    * Formatting the header area
+    */
+    header {
+    background-color: #B50401;
+    height: 60px;
+    width: auto;
+    opacity: 1;
+    margin-bottom: 10px;
+    
+    }
+    header h1.logo {
+    margin-top: 9px;
+    margin-left: 10px;
+    font-size: 32px;
+    color: #fff;
+    text-transform: uppercase;
+    float: left;
+    }
+
+    header h1.text {
+    margin-top: 13px;
+    margin-left: 10px;
+    font-size: 32px;
+    color: #fff;
+    text-transform: uppercase;
+    float: left;
+    }
+
+    header h1.logo:hover {
+    color: #fff;
+    text-decoration: none;
+    }
+    /*
+    * Centering the body content
+    */
+    .container {
+    width: auto;
+    /*margin: 0;*/
+    margin-right: 10px;
+    }
+    div.home {
+    padding: 10px 0 30px 0;
+    background-color: #E6E6FA;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    }
+    div.about {
+    padding: 10px 0 30px 0;
+    background-color: #E6E6FA;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    }
+    h2 {
+    font-size: 100px;
+    margin-top: 40px;
+    text-align: center;
+    letter-spacing: -2px;
+    }
+    h3 {
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #000;
+    opacity: .9;
+    margin-top: 450px;
+    }
+    .menu {
+    float: right;
+    margin-top: 15px;
+    margin-right: 0;
+    }
+    .menu li {
+    display: inline;
+    }
+    .menu li + li {
+    margin-left: 50px;
+    }
+    .menu li a {
+    font-size: 25px;
+    color: #000;
+    text-decoration: none;
+    }
